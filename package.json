@@ -1,0 +1,40 @@
+{
+  "name": "hrr36-fec-tyler-proxy",
+  "version": "1.0.0",
+  "description": "A Proxy Server for our Front End Capstone Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "react-dev": "webpack -d --watch",
+    "lint": "node_modules/.bin/eslint \"**/*.js*\"",
+    "test": "NODE_ENV=testing jest --forceExit"
+  },
+  "keywords": [
+    "javascript",
+    "proxy",
+    "server",
+    "node",
+    "express"
+  ],
+  "author": "Tyler Bailey",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "babel": "^6.23.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jest": "^24.1.0",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
