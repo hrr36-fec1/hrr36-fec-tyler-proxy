@@ -1,0 +1,309 @@
+/* RESETS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-size-adjust: none;
+}
+
+/* GENERAL STYLING */
+html {
+  font-size: 16px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+div {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/* GENERAL */
+.oswald {
+  font-family: 'Oswald',"proxima_nova","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clr {
+  clear: both;
+}
+
+.fh40 {
+  height: 40px;
+}
+.gu4 {
+  width: 370px;
+}
+
+.fxdcol {
+  display: inline;
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  vertical-align: top;
+  border: 0;
+}
+
+.gu4 .pad_btm1 {
+  padding-: 0 !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* METASCORE */
+.title_bump .section_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #424242;
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.title_bump .section_title:after {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 3px;
+  background: #424242;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.reviews .distribution {
+  width: 100%;
+  height: 6.5rem;
+  display: flex;
+  flex-direction: row;
+  clear: both;
+  padding-top: 5px;
+}
+/* METASCORE SCORE */
+.score {
+  height: 70px;
+}
+.metascore_w {
+  vertical-align: middle;
+  text-align: center;
+  color: #fff!important;
+  font-family: Arial,Helvetica,sans-serif;
+  font-style: normal!important;
+  font-weight: bold!important;
+  background-color: transparent;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  font-size: 17px;
+  border-radius: 6px;
+}
+
+.reviews .distribution .score {
+  width: 5.5rem;
+
+}
+
+a.metascore_w {
+  color: #fff!important;
+  text-decoration: none!important;
+}
+
+.metascore_w.positive, .metascore_w.good, .metascore_w.sixtyone, .metascore_w.game.seventyfive, .metascore_w.score_favorable, .metascore_w.score_outstanding {
+  background-color: #6c3;
+}
+
+.metascore_w.negative, .metascore_w.bad, .metascore_w.score_terrible, .metascore_w.score_unfavorable {
+  background-color: #f00;
+}
+
+.metascore_w.mixed, .metascore_w.forty, .metascore_w.score_mixed {
+  background-color: #fc3;
+}
+
+.metascore_w.larger {
+  font-size: 35px;
+  height: 70px;
+  width: 70px;
+  box-sizing: border-box;
+}
+
+/* METASCORE CHARTS */
+.chart {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.chart .bar {
+  width: 100%;
+  height: .25rem;
+}
+
+.chart .text {
+  min-width: 5.3rem;
+  font-size: .75rem;
+  padding: .2rem 0 .55rem 0;
+  text-transform: uppercase;
+}
+
+.reviews .distribution .charts {
+  width: calc(100% - 5.5rem);
+  height: 100%;
+}
+
+.chart_wrapper {
+  position: relative;
+  display: block;
+  height: 30%; /* i added this one */
+}
+
+.chart_bg {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: .25rem;
+  width: 100%;
+  background-color: rgba(150,150,150,0.1);
+  box-sizing: inherit;
+}
+
+.chart .bar.positive, .chart .bar.score_favorable, .chart .bar.score_outstanding, .chart .bar.good {
+  background-color: #6c3;
+}
+
+.chart .bar.mixed, .chart .bar.score_mixed {
+  background-color: #fc3;
+}
+
+.chart .bar.negative, .chart .bar.score_terrible, .chart .bar.score_unfavorable, .chart .bar.bad {
+  background-color: #f00;
+}
+
+/* REVIEW LIST */
+.review_list {
+  height: 70%;
+}
+
+.subsection_title {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.pad_top_half {
+  padding-top: .4rem;
+}
+
+.pad_btm2 {
+  padding-bottom: 1.6rem;
+}
+
+.pad_top2 {
+  padding-top: 1.6rem;
+}
+
+.review {
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+.critic_reviews2 .head_wrap {
+  display: table-row;
+}
+
+.critic_reviews2 .score_wrap {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: .8rem;
+}
+
+.metascore_w.indiv.header_size {
+  font-size: 22px;
+}
+
+.metascore_w.indiv {
+  height: 1.9em;
+  width: 1.9em;
+  font-size: 15px;
+  line-height: 1.9em;
+}
+
+.critic_reviews2 .pub_wrap {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.review .title {
+  font-weight: bold;
+}
+
+.critic_reviews2 .pub_wrap .date {
+  font-weight: normal;
+  color: #ccc;
+  font-size: .8rem;
+}
+
+.review .summary {
+  line-height: 1.3rem;
+  font-size: .95rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.read_full {
+  color: #000;
+  font-size: .875rem;
+  font-weight: bold;
+}
+
+.see_all.boxed {
+    display: inline-block;
+    width: 100%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: #000;
+    font-size: .9rem;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+
+/* ON HOVER COLOR CHANGES */
+
+a:hover, .text.oswald:hover {
+  color: #fdd030;
+}
+
+.no_hover:hover {
+  color: inherit;
+}
+
