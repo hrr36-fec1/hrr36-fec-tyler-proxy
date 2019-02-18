@@ -12,10 +12,10 @@ const ChartWrapper = ({ length, type, reviews }) => {
       <div className={`chart ${type}`} style={barLength}>
         <div className={`bar ${type}`} />
         <div className="text oswald">
-          <div className="label fl">
+          <div className="fl">
             {`${type}:`}
           </div>
-          <div className="count fr">{reviews}</div>
+          <div className="fr">{reviews}</div>
           <div className="clr" />
         </div>
       </div>

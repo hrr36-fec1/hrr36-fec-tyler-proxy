@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">93.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>14/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">93.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>14/15</span>
       </div>
     </div>
     <p class="quiet">
@@ -101,12 +101,28 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
@@ -117,6 +133,18 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,7 +167,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,13 +184,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 &nbsp;
 const ReviewListItem = ({ review }) =&gt; {
+  // format date
   const options = { month: 'short', day: 'numeric', year: 'numeric' };
   const date = new Date(review.publishDate).toLocaleDateString('en-US', options);
 &nbsp;
+  // hash scores for styling
   let reaction;
   if (review.score &gt; 60) {
     reaction = 'positive';
@@ -172,6 +202,18 @@ const ReviewListItem = ({ review }) =&gt; {
     reaction = 'negative';
   }
 &nbsp;
+  // break review up into paragraphs
+  const summary = review.body.split('\n').map(el =&gt; (
+    &lt;p key={el}&gt;
+      {el}
+      &lt;br /&gt;
+    &lt;/p&gt;
+  ));
+&nbsp;
+  // get state info for "view more"
+  const [expanded, setExpanded] = useState(false);
+  const toggledClass = expanded ? <span class="branch-0 cbranch-no" title="branch not covered" >'expanded' </span>: 'collapsed';
+&nbsp;
   return (
     &lt;div className="review pad_top2 pad_btm2"&gt;
       &lt;div className="head_wrap"&gt;
@@ -179,7 +221,7 @@ const ReviewListItem = ({ review }) =&gt; {
           &lt;div className={`metascore_w header_size movie ${reaction} indiv`}&gt;{review.score.toFixed(0)}&lt;/div&gt;
         &lt;/div&gt;
         &lt;div className="pub_wrap title"&gt;
-          &lt;span className="source"&gt;
+          &lt;span&gt;
             &lt;a href="/"&gt;{review.publication}&lt;/a&gt;
           &lt;/span&gt;
           &lt;span className="dash"&gt; &amp;ndash; &lt;/span&gt;
@@ -190,11 +232,11 @@ const ReviewListItem = ({ review }) =&gt; {
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div className="summary_wrap pad_top_half"&gt;
-        &lt;div className="summary"&gt;
-          &lt;a href="/" className="no_hover"&gt;{review.body}&lt;/a&gt;
+        &lt;div className={`summary ${toggledClass}`}&gt;
+          &lt;a href="/" className="no_hover"&gt;{summary}&lt;/a&gt;
           &lt;br /&gt;
-          &lt;a href="/" className="read_full"&gt;Read Full Review&lt;/a&gt;
         &lt;/div&gt;
+        &lt;button type="button" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >setExpanded(!expanded)}</span> className="read_full"&gt;{ expanded ? <span class="branch-0 cbranch-no" title="branch not covered" >'View Less' </span>: 'Read Full Review'}&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   );
@@ -217,7 +259,7 @@ ReviewListItem.propTypes = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 10 2019 14:00:55 GMT-0600 (CST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 14 2019 12:39:35 GMT-0600 (CST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

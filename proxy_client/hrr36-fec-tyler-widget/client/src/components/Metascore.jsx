@@ -42,15 +42,15 @@ const Metascore = ({ scores }) => {
 
   return (
     <div className="metascore_charts">
-      <div className="title_bump pad_btm1 oswald fh40">
-        <div className="section_title bold">
+      <div className="title title_bump pad_btm1 oswald">
+        <div className="section_title">
           <a href="/">Metascore</a>
         </div>
       </div>
       <div className="distribution">
         <div className="score fl">
-          <a href="/" className="metascore_anchor">
-            <div className={`metascore_w larger movie ${avgRating}`}>{avgScore}</div>
+          <a href="/" className="">
+            <div className={`metascore_w title larger movie ${avgRating}`}>{avgScore}</div>
           </a>
         </div>
         <div className="charts fl">

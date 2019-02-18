@@ -43,7 +43,9 @@ const create = (review) => {
 
 const removeAll = () => Review.remove({});
 
-module.exports = Review;
-module.exports.search = search;
-module.exports.create = create;
-module.exports.removeAll = removeAll;
+module.exports = {
+  Review,
+  search,
+  create,
+  removeAll,
+};

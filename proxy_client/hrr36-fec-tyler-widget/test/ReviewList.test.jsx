@@ -13,6 +13,12 @@ describe('ReviewList', () => {
   });
 
   it('should render several ReviewListItem components', () => {
-    expect(wrapper.find(ReviewListItem)).toHaveLength(4);
+    const smallerWrapper = shallow(<ReviewList reviews={reviews.slice(0, 5)} />);
+    expect(smallerWrapper.find(ReviewListItem)).toHaveLength(5);
+  });
+
+  it('should render at most 7 ReviewListItem components', () => {
+    const length = reviews.length > 7 ? 7 : reviews.length;
+    expect(wrapper.find(ReviewListItem)).toHaveLength(length);
   });
 });

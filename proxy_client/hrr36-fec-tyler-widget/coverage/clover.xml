@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1549828855744" clover="3.2.0">
-  <project timestamp="1549828855744" name="All files">
-    <metrics statements="97" coveredstatements="88" conditionals="19" coveredconditionals="15" methods="23" coveredmethods="19" elements="139" coveredelements="122" complexity="0" loc="97" ncloc="97" packages="5" files="10" classes="10"/>
+<coverage generated="1550169575585" clover="3.2.0">
+  <project timestamp="1550169575585" name="All files">
+    <metrics statements="98" coveredstatements="95" conditionals="25" coveredconditionals="22" methods="24" coveredmethods="21" elements="147" coveredelements="138" complexity="0" loc="98" ncloc="98" packages="5" files="10" classes="10"/>
     <package name="client.src">
-      <metrics statements="17" coveredstatements="15" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="6"/>
+      <metrics statements="16" coveredstatements="15" conditionals="5" coveredconditionals="4" methods="7" coveredmethods="6"/>
       <file name="App.jsx" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/client/src/App.jsx">
-        <metrics statements="17" coveredstatements="15" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="6"/>
+        <metrics statements="16" coveredstatements="15" conditionals="5" coveredconditionals="4" methods="7" coveredmethods="6"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
@@ -13,20 +13,19 @@
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
+        <line num="26" count="11" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
         <line num="39" count="3" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
-        <line num="42" count="3" type="cond" truecount="4" falsecount="0"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="41" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
     <package name="client.src.components">
-      <metrics statements="44" coveredstatements="38" conditionals="14" coveredconditionals="11" methods="8" coveredmethods="7"/>
+      <metrics statements="49" coveredstatements="48" conditionals="18" coveredconditionals="16" methods="10" coveredmethods="9"/>
       <file name="ChartWrapper.jsx" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/client/src/components/ChartWrapper.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="3" type="stmt"/>
@@ -35,59 +34,64 @@
         <line num="28" count="3" type="stmt"/>
       </file>
       <file name="Metascore.jsx" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/client/src/components/Metascore.jsx">
-        <metrics statements="21" coveredstatements="19" conditionals="8" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="35" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="35" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="38" count="1" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
         <line num="69" count="2" type="stmt"/>
       </file>
       <file name="ReviewList.jsx" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/client/src/components/ReviewList.jsx">
-        <metrics statements="9" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
       </file>
       <file name="ReviewListItem.jsx" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/client/src/components/ReviewListItem.jsx">
-        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <metrics statements="15" coveredstatements="14" conditionals="8" coveredconditionals="6" methods="3" coveredmethods="2"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
         <line num="6" count="3" type="stmt"/>
-        <line num="9" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="1" falsecount="1"/>
+        <line num="61" count="3" type="stmt"/>
       </file>
     </package>
     <package name="database">
-      <metrics statements="22" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+      <metrics statements="19" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
       <file name="Review.js" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/database/Review.js">
-        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -101,18 +105,15 @@
         <line num="41" count="7" type="stmt"/>
         <line num="44" count="5" type="stmt"/>
         <line num="46" count="2" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
       </file>
       <file name="index.js" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/database/index.js">
-        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
       </file>
     </package>
     <package name="examples">
