@@ -13,8 +13,8 @@ const ReviewList = ({ reviews }) => {
   // otherwise, display 2 highest, 3 middlest, 2 lowest
   } else {
     const midpoint = Math.floor(reviews.length / 2);
-    const reviewsToDisplay = [reviews[0], reviews[1], reviews[midpoint + 1],
-      reviews[midpoint], reviews[midpoint - 1], reviews[reviews.length - 2],
+    const reviewsToDisplay = [reviews[0], reviews[1], reviews[midpoint - 1],
+      reviews[midpoint], reviews[midpoint + 1], reviews[reviews.length - 2],
       reviews[reviews.length - 1]];
     reviewListItems = reviewsToDisplay
       .map(review => <ReviewListItem review={review} key={review._id} />);
@@ -24,13 +24,13 @@ const ReviewList = ({ reviews }) => {
       <div className="subsection_title">
         <a href="/">Critic Reviews</a>
       </div>
-      <div className="list pad_top_half pad_btm1">
+      <div className="pad_top_half">
         <div className="critic_reviews2">
           {reviewListItems}
         </div>
       </div>
-      <div className="pad_btm1">
-        <a href="/" className="see_all boxed oswald">{`SEE ALL ${reviews.length} REVIEWS`}</a>
+      <div>
+        <a href="/" className="see_all title boxed oswald">{`SEE ALL ${reviews.length} REVIEWS`}</a>
       </div>
     </div>
   );

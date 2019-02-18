@@ -7,7 +7,7 @@ import ChartWrapper from '../client/src/components/ChartWrapper';
 import scores from '../examples/scores';
 
 describe('Metascore', () => {
-  const wrapper = shallow(<Metascore scores={scores} />);
+  const wrapper = shallow(<Metascore scores={scores.mixedScores} />);
 
   it('should render three bar types', () => {
     expect(wrapper.find(ChartWrapper)).toHaveLength(3);
@@ -30,5 +30,16 @@ describe('Metascore', () => {
 
   it('should render an integral metascore (not decimal)', () => {
     expect(wrapper.find('.metascore_w').text()).toBe('42');
+    expect(wrapper.find('.metascore_w.mixed')).toHaveLength(1);
+  });
+
+  it('should render positive average score', () => {
+    const posWrapper = shallow(<Metascore scores={scores.posScores} />);
+    expect(posWrapper.find('.metascore_w.positive')).toHaveLength(1);
+  });
+
+  it('should render negative average score', () => {
+    const negWrapper = shallow(<Metascore scores={scores.negScores} />);
+    expect(negWrapper.find('.metascore_w.negative')).toHaveLength(1);
   });
 });

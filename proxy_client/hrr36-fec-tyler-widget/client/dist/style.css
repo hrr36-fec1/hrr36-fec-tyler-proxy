@@ -1,27 +1,8 @@
-/* RESETS */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-size-adjust: none;
-}
-
 /* GENERAL STYLING */
-html {
-  font-size: 16px;
-}
-
 body {
   box-sizing: border-box;
   font-family: Helvetica,Arial,sans-serif;
-}
-
-div {
-  display: block;
+  color: #000;
 }
 
 a {
@@ -36,7 +17,15 @@ a:visited {
   color: inherit;
 }
 
-/* GENERAL */
+button {
+  padding-top: 2px;
+}
+
+p {
+  padding: 2px;
+}
+
+/* GENERAL PURPOSE TAGS */
 .oswald {
   font-family: 'Oswald',"proxima_nova","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -49,38 +38,50 @@ a:visited {
   float: right;
 }
 
-.clr {
-  clear: both;
+.fxdcol {
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+}
+.metascore_w.positive, .chart .bar.positive {
+  background-color: #6c3;
 }
 
-.fh40 {
-  height: 40px;
+.metascore_w.mixed, .chart .bar.mixed {
+  background-color: #fc3;
 }
-.gu4 {
+
+.metascore_w.negative, .chart .bar.negative {
+  background-color: #f00;
+}
+
+.reviews {
   width: 370px;
 }
 
-.fxdcol {
-  display: inline;
-  float: left;
-  margin-left: 15px;
-  margin-right: 15px;
-  vertical-align: top;
-  border: 0;
-}
-
-.gu4 .pad_btm1 {
-  padding-: 0 !important;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
+.title {
+  font-weight: bold;
 }
 
 /* METASCORE */
+#metascore {
+  display: flex;
+}
+
+.metascore_charts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title_bump {
+  height: 40px;
+}
+
 .title_bump .section_title {
   font-size: 20px;
-  font-weight: bold;
   color: #424242;
   position: relative;
   margin-bottom: 26px;
@@ -98,26 +99,16 @@ a:visited {
   bottom: -10px;
 }
 
-.reviews .distribution {
-  width: 100%;
-  height: 6.5rem;
-  display: flex;
-  flex-direction: row;
-  clear: both;
-  padding-top: 5px;
-}
 /* METASCORE SCORE */
 .score {
   height: 70px;
 }
+
 .metascore_w {
   vertical-align: middle;
   text-align: center;
   color: #fff!important;
-  font-family: Arial,Helvetica,sans-serif;
-  font-style: normal!important;
-  font-weight: bold!important;
-  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
   height: 2em;
   width: 2em;
   line-height: 2em;
@@ -127,24 +118,10 @@ a:visited {
 
 .reviews .distribution .score {
   width: 5.5rem;
-
 }
 
 a.metascore_w {
   color: #fff!important;
-  text-decoration: none!important;
-}
-
-.metascore_w.positive, .metascore_w.good, .metascore_w.sixtyone, .metascore_w.game.seventyfive, .metascore_w.score_favorable, .metascore_w.score_outstanding {
-  background-color: #6c3;
-}
-
-.metascore_w.negative, .metascore_w.bad, .metascore_w.score_terrible, .metascore_w.score_unfavorable {
-  background-color: #f00;
-}
-
-.metascore_w.mixed, .metascore_w.forty, .metascore_w.score_mixed {
-  background-color: #fc3;
 }
 
 .metascore_w.larger {
@@ -157,9 +134,6 @@ a.metascore_w {
 /* METASCORE CHARTS */
 .chart {
   position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
   cursor: pointer;
 }
 
@@ -176,14 +150,14 @@ a.metascore_w {
 }
 
 .reviews .distribution .charts {
-  width: calc(100% - 5.5rem);
+  width: calc(100% - 5.5rem); /* this is 5.5 because of .reviews .distribution .score */
   height: 100%;
 }
 
 .chart_wrapper {
   position: relative;
   display: block;
-  height: 30%; /* i added this one */
+  height: 33%;
 }
 
 .chart_bg {
@@ -197,26 +171,17 @@ a.metascore_w {
   box-sizing: inherit;
 }
 
-.chart .bar.positive, .chart .bar.score_favorable, .chart .bar.score_outstanding, .chart .bar.good {
-  background-color: #6c3;
-}
-
-.chart .bar.mixed, .chart .bar.score_mixed {
-  background-color: #fc3;
-}
-
-.chart .bar.negative, .chart .bar.score_terrible, .chart .bar.score_unfavorable, .chart .bar.bad {
-  background-color: #f00;
-}
-
 /* REVIEW LIST */
 .review_list {
   height: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 .subsection_title {
   font-size: 1.5rem;
   font-weight: normal;
+  margin-top: 4px;
 }
 
 .pad_top_half {
@@ -224,16 +189,18 @@ a.metascore_w {
 }
 
 .pad_btm2 {
-  padding-bottom: 1.6rem;
+  padding-bottom: 1rem;
 }
 
 .pad_top2 {
-  padding-top: 1.6rem;
+  padding-top: 1rem;
 }
 
-.review {
+.review   {
   border-top: 1px solid #ccc;
-  width: 100%;
+  width: inherit;
+  height: 20%;
+  flex-direction: column;
 }
 
 .critic_reviews2 .head_wrap {
@@ -241,7 +208,6 @@ a.metascore_w {
 }
 
 .critic_reviews2 .score_wrap {
-  display: table-cell;
   vertical-align: top;
   padding-right: .8rem;
 }
@@ -250,20 +216,9 @@ a.metascore_w {
   font-size: 22px;
 }
 
-.metascore_w.indiv {
-  height: 1.9em;
-  width: 1.9em;
-  font-size: 15px;
-  line-height: 1.9em;
-}
-
 .critic_reviews2 .pub_wrap {
   display: table-cell;
   vertical-align: top;
-}
-
-.review .title {
-  font-weight: bold;
 }
 
 .critic_reviews2 .pub_wrap .date {
@@ -280,9 +235,7 @@ a.metascore_w {
 }
 
 .read_full {
-  color: #000;
   font-size: .875rem;
-  font-weight: bold;
 }
 
 .see_all.boxed {
@@ -291,19 +244,34 @@ a.metascore_w {
     height: 2.2rem;
     line-height: 2.2rem;
     text-align: center;
-    color: #000;
     font-size: .9rem;
     border: 1px solid #000;
-    font-weight: bold;
+}
+
+.summary {
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 3.6em;
+}
+
+.summary.collapsed{
+  overflow: hidden;
+  height: 3.8em;
+  line-height: 1.2em;
+}
+
+.summary.expanded{
+  overflow: visible;
+  height: auto;
+  line-height: 1.2em;
 }
 
 /* ON HOVER COLOR CHANGES */
 
-a:hover, .text.oswald:hover {
+a:hover, .oswald:hover, button:hover {
   color: #fdd030;
 }
 
 .no_hover:hover {
   color: inherit;
 }
-

@@ -20,6 +20,8 @@ const create = (movie) => {
   return toSave.save();
 };
 
-module.exports = Movie;
-module.exports.find = find;
-module.exports.create = create;
+module.exports = {
+  Movie,
+  find,
+  create,
+};
