@@ -1,0 +1,365 @@
+.social {
+  padding-left: 11.5%;
+  width: 498px;
+  height: 44px;
+  padding-bottom: 15px;
+}
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  font-family: Helvetica,Arial,sans-serif;
+  color: 333333;
+  padding-left: 10%;
+}
+
+@media all and (min-width: 600px) {
+   /*We tell both sidebars to share a row*/
+  .aside-1 { flex: 1 auto; }
+}
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars
+   */
+  .details { flex: 2 0px; }
+  .aside-1 { order: 1; }
+  .details    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+.image {
+  width: 140px;
+  height: 212px;
+  border-top: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  float: left;
+}
+.details {
+  width: 450px;
+  height: 438px;
+  text-align: left;
+  max-width: 500px;
+}
+.top-section {
+  padding-bottom: 40px
+}
+h1 {
+  width: 460px;
+  height: 22px;
+  margin-top: -5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+h1:hover {
+  color: #fdd030;
+  cursor: pointer;
+}
+.sec-1 {
+  width: 500px:
+  height: 19px;
+  padding: .1rem 0;
+  display: inline-block;
+}
+#rating-block {
+  width: 68px;
+  height: 19px;
+  margin-right: .4rem;
+  vertical-align: middle;
+}
+.col {
+  width: 40%;
+  padding: 5px;
+  display: inline-block;
+}
+#prod-release {
+  display: inline;
+}
+/*.sec-1::after {
+  content: "";
+  clear: both;
+  display: table;
+}*/
+.starring {
+  width: 500px;
+  height: 55px;
+  padding: .10rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.star:hover {
+  color: #fdd030;
+  cursor: pointer;
+
+}
+
+
+.heading {
+  font-weight: bold;
+}
+
+.summary {
+  width: 500px;
+  height: 90px;
+  font-size: .95rem;
+  padding: .4rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+.director {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+#direct:hover {
+  color: #fdd030;
+  cursor: pointer;
+}
+
+.genre {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+.rating {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+.runtime {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+#footer {
+  height: 40px;
+  border-top: 40px;
+  padding: 1rem 0;
+}
+
+#footer:hover {
+  color: #fdd030;
+  cursor: pointer;
+}
+
+.social {
+  padding-left: 11.5%;
+  width: 498px;
+  height: 44px;
+  padding-bottom: 15px;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  font-family: Helvetica,Arial,sans-serif;
+  color: 333333;
+  padding-left: 10%;
+}
+
+
+@media all and (min-width: 600px) {
+   We tell both sidebars to share a row
+  .aside-1 { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars
+   */
+  .details { flex: 2 0px; }
+  .aside-1 { order: 1; }
+  .details    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+
+.image {
+  width: 140px;
+  height: 212px;
+  border-top: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  float: left;
+}
+
+.details {
+  width: 450px;
+  height: 438px;
+  text-align: left;
+  max-width: 500px;
+}
+
+.top-section {
+  padding-bottom: 40px
+}
+
+h1 {
+  width: 460px;
+  height: 22px;
+  margin-top: -5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h1:hover {
+  color: #fdd030;
+  cursor: pointer;
+}
+
+
+.sec-1 {
+  width: 500px:
+  height: 19px;
+  padding: .1rem 0;
+  display: inline-block;
+}
+
+#rating-block {
+  width: 68px;
+  height: 19px;
+  margin-right: .4rem;
+  vertical-align: middle;
+}
+
+.col {
+
+  width: 40%;
+  padding: 5px;
+  display: inline-block;
+}
+
+#prod-release {
+  display: inline;
+}
+
+
+/*.sec-1::after {
+  content: "";
+  clear: both;
+  display: table;
+}*/
+
+
+
+.starring {
+  width: 500px;
+  height: 55px;
+  padding: .10rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.star:hover {
+  color: #fdd030;
+  cursor: pointer;
+
+}
+
+
+.heading {
+  font-weight: bold;
+}
+
+
+.summary {
+  width: 500px;
+  height: 90px;
+  font-size: .95rem;
+  padding: .4rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+.director {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+#direct:hover {
+  color: #fdd030;
+  cursor: pointer;
+}
+
+.genre {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+.rating {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+.runtime {
+  width: 500px;
+  height: 15px;
+  font-size: .95rem;
+  padding: .1rem 0;
+  flex-flow: row wrap;
+  display: inline-block;
+}
+
+#footer {
+  height: 40px;
+  border-top: 40px;
+  padding: 1rem 0;
+}
+
+#footer:hover {
+  color: #fdd030;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

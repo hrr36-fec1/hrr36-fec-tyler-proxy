@@ -227,7 +227,7 @@ a.metascore_w {
   font-size: .8rem;
 }
 
-.review .summary {
+.review .review-summary {
   line-height: 1.3rem;
   font-size: .95rem;
   overflow-wrap: break-word;
@@ -248,19 +248,19 @@ a.metascore_w {
     border: 1px solid #000;
 }
 
-.summary {
+.review-summary {
   overflow: hidden;
   line-height: 1.2em;
   height: 3.6em;
 }
 
-.summary.collapsed{
+.review-summary.collapsed{
   overflow: hidden;
   height: 3.8em;
   line-height: 1.2em;
 }
 
-.summary.expanded{
+.review-summary.expanded{
   overflow: visible;
   height: auto;
   line-height: 1.2em;
