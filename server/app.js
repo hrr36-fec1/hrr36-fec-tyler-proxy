@@ -4,6 +4,7 @@ const path = require('path');
 const request = require('request');
 
 const app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(`${__dirname}/../proxy_client/`)));
@@ -23,6 +24,7 @@ app.get('/api/movies/:movieId/reviews', (req, res) => {
   });
 });
 
+// britt
 app.get('/api/movies/details/jurassic-park', (req, res) => {
   const options = {
     hostname: '127.0.0.1',
@@ -38,4 +40,37 @@ app.get('/api/movies/details/jurassic-park', (req, res) => {
   });
 });
 
+// bill
+app.get('/api/movies/:movie_slug/trailers', (req, res) => {
+  console.log(req.params);
+  const options = {
+    hostname: '127.0.0.1',
+    port: 3333,
+    path: `/api/movies/${req.params.movie_slug}/trailers`,
+    method: 'GET',
+    json: true,
+    uri: `http://127.0.0.1:3333/api/movies/${req.params.movie_slug}/trailers`,
+  };
+  request(options, (err, response, body) => {
+    if (err) console.log(err);
+    res.json(body);
+  });
+});
+
+// merary
+app.get('/api/movies/banner', (req, res) => {
+  const options = {
+    hostname: '127.0.0.1',
+    port: 8080,
+    path: '/api/movies/banner',
+    method: 'GET',
+    json: true,
+    uri: 'http://127.0.0.1:8080/api/movies/banner',
+  };
+  request(options, (err, response, body) => {
+    if (err) console.log(err);
+    console.log(body);
+    res.json(body);
+  });
+});
 module.exports = app;
