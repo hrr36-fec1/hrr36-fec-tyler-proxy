@@ -1,0 +1,17 @@
+.table {
+  display: flex;
+}
+
+.table-item {
+  height: 3000px;
+  flex-direction: row;
+  display: flex;
+}
+
+.table-item #iframe2 {
+  width: 1000px;
+}
+
+.table-item #iframe2 {
+  
+}
