@@ -1,8 +1,17 @@
 const mongoose = require('mongoose');
+const Review = require('./Review.js');
+const Movie = require('./Movie.js');
 
-const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/metascore';
+const mongoHostName = process.env.NODE_ENV === 'dev' ? 'localhost' : 'database';
+const mongoUri = `mongodb://${mongoHostName}:27017/metascore`;
+console.log(mongoUri);
+console.log('--------------DATABASE START-------------------');
 const db = mongoose.connect(mongoUri, { useNewUrlParser: true })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.log(err));
+  .then(() => console.log(`Connected to MongoDB on: ${mongoUri}`))
+  .catch(err => console.log(`Error: ${err}`));
 
-module.exports = db;
+module.exports = {
+  db,
+  Review,
+  Movie,
+};

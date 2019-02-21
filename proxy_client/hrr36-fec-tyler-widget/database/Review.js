@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const db = require('./index.js'); // eslint-disable-line no-unused-vars
 
 mongoose.Promise = global.Promise;
 
@@ -26,7 +25,7 @@ const reviewSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  author_movie: { type: String, index: { unique: true } },
+  author_movie: { type: String, index: { unique: false } },
 });
 
 const Review = mongoose.model('Review', reviewSchema);

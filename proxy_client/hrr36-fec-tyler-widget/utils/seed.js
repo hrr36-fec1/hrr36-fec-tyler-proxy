@@ -2,9 +2,7 @@ const Promise = require('bluebird');
 const path = require('path');
 const fs = Promise.promisifyAll(require('fs'));
 const faker = require('faker');
-
-const Movie = require('../database/Movie.js');
-const Review = require('../database/Review.js');
+const { Review } = require('../database/index.js');
 
 // reads data from the imdb movie list and parses it into
 // the movie id, the year the movie was released, and the titles via regex
@@ -49,16 +47,24 @@ const generateReviews = async (movies) => {
   }
   return movieReviews;
 };
+console.log('-----------------REMOVE OLD DATA--------------------');
+Review.removeAll()
+  .then(() => console.log('removal complete'))
+  .catch(err => console.log(err))
+  .then(() => {
+    console.log('---------------------DATALOAD-----------------------');
+    console.log(`BEGINNING DATA LOAD ON ${process.env.MONGODB_URI}`);
+    console.log('----------------------------------------------------');
+    parseData(path.join((`${__dirname}/../examples/imdb-movie-list.txt`)))
+      .then(movies => generateReviews(movies))
+      .then(moviesReviews => moviesReviews
+        .map(reviews => reviews
+          .map(review => Review.create(review))))
+      .then(() => console.log('load complete'))
+      .catch(err => console.log(err));
+  });
 
-// seed db with reviews
-parseData(path.join((`${__dirname}/../examples/imdb-movie-list.txt`)))
-  .then(movies => generateReviews(movies))
-  .then(moviesReviews => moviesReviews
-    .map(reviews => reviews
-      .map(review => Review.create(review))))
-  .then(() => console.log('complete'))
-  .catch(err => new Error(err));
-
+/*
 parseData(path.join((`${__dirname}/../examples/imdb-movie-list.txt`)))
   .then((data) => {
     const movies = [];
@@ -72,4 +78,5 @@ parseData(path.join((`${__dirname}/../examples/imdb-movie-list.txt`)))
     return movies.map(movie => Movie.create(movie));
   })
   .then(() => console.log('complete'))
-  .catch(err => new Error(err));
+  .catch(err => console.log(err));
+*/

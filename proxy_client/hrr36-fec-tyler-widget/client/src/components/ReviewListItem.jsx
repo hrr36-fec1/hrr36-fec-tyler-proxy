@@ -46,7 +46,7 @@ const ReviewListItem = ({ review }) => {
         </div>
       </div>
       <div className="pad_top_half">
-        <div className={`summary ${toggledClass}`}>
+        <div className={`review-summary ${toggledClass}`}>
           <a href="/" className="no_hover">{summary}</a>
           <br />
         </div>
