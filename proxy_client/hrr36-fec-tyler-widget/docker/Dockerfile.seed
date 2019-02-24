@@ -1,3 +1,0 @@
-FROM mongo:latest
-COPY /mongo-seed/init.json /init.json
-CMD mongoimport --host database --db metascore --collection reviews --type json --file /init.json --jsonArray
