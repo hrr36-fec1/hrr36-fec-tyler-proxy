@@ -16,7 +16,7 @@ app.get('/api/movies/:movieId/reviews', (req, res) => {
     path: `/api/movies/${req.params.movieId}/reviews`,
     method: 'GET',
     json: true,
-    uri: `http://ec2-3-17-27-102.us-east-2.compute.amazonaws.com/api/movies/${req.params.movieId}/reviews`,
+    uri: `http://ec2-18-222-191-108.us-east-2.compute.amazonaws.com/api/movies/${req.params.movieId}/reviews`,
   };
   request(options, (err, response, body) => {
     if (err) console.log(err);
