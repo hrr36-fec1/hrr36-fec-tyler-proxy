@@ -25,12 +25,10 @@ app.get('/api/movies/:movieId/reviews', (req, res) => {
 // britt
 app.get('/api/movies/details/jurassic-park', (req, res) => {
   const options = {
-    hostname: '127.0.0.1',
-    port: 3002,
     path: '/api/movies/details/jurassic-park',
     method: 'GET',
     json: true,
-    uri: 'http://127.0.0.1:3002/api/movies/details/jurassic-park',
+    uri: 'http://bzfecservice-env.hi3tgp7xvp.us-east-1.elasticbeanstalk.com/api/movies/details/jurassic-park',
   };
   request(options, (err, response, body) => {
     if (err) console.log(err);
